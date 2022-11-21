@@ -1,0 +1,320 @@
+body {
+  margin: 0;
+}
+
+/* Intro */
+#IntroContainer{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainLogo{
+  width: 80px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+#IntroContainer section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h1{
+  font-size: 1.8rem;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+section h1:first-child{
+  margin-top: 70px;
+}
+
+section img{
+  width: 70vw;
+}
+
+section p{
+  font-size: 1rem;
+  text-align: center;
+  line-height:25px;
+  margin-top: 45px;
+}
+
+
+/* bun 페이지*/
+
+#firstTotalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+#firstTotalContainer h1{
+  text-align: center;
+}
+
+#explain {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#explain h1 {
+  margin-top: 70px;
+  margin-bottom: 0;
+}
+
+#explain img {
+  width: 70vw;
+  margin-top: 50px;
+}
+
+.info {
+  width: 30px !important;
+  position: absolute;
+}
+
+#info1 {
+  top: 160px;
+  right: 60px;
+}
+
+#info2 {
+  top: 265px;
+  left: 15px;
+}
+
+#info3 {
+  bottom: 150px;
+  left: 160px;
+}
+
+#TopButton {
+  bottom: 70px;
+}
+#BottomButton {
+  bottom: 30px;
+}
+
+.swal2-title {
+  font-size: 25px !important;
+}
+
+.swal2-html-container {
+  font-size: 15px !important;
+  line-height: 23px;
+  /*font-family: Georgia, serif;*/
+}
+
+
+
+#Buncontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#nameinput {
+  padding: 15px 30px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #4868a3;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 50px;
+  margin-top: 20vh;
+}
+
+.selectDrink {
+  text-align: center;
+}
+
+#drink {
+  width: 250px;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.coke {
+  color: red;
+  outline: none;
+  border: 2px solid red;
+}
+
+#drink option:nth-child(2) {
+  color: red;
+}
+
+.sprite {
+  outline: none;
+  border: 2px solid #32aa59;
+  color: #32aa59;
+}
+
+#drink option:nth-child(3) {
+  color: #32aa59;
+}
+
+.fanta {
+  outline: none;
+  border: 2px solid #f0831b;
+  color: #f0831b;
+}
+
+#drink option:nth-child(4) {
+  color: #f0831b;
+}
+
+.water {
+  outline: none;
+  border: 2px solid #4e73b8;
+  color: #4e73b8;
+}
+
+#drink option:last-child {
+  color: #4e73b8;
+}
+
+#openingBtn {
+  margin-top: 70px;
+  width: 200px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+#questionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#questionContainer h1 {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.question {
+  display: flex;
+  height: 40px;
+  width: 73vw;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 30px;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 13px;
+}
+
+.question select {
+  border: none;
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+#selectbtn {
+  position: relative;
+  margin-top: 17px;
+  width: 200px;
+  height: 80px;
+  padding: 7px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#selectbtn span {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/*결과 페이지*/
+#resultContainer  {
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+
+#resultContainer img {
+  width: 60vw;
+  margin-top: 5vh;
+}
+
+#resultContainer h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 0;
+}
+
+#resultContainer p {
+  margin: 0;
+  margin-top: 3px;
+}
+
+#resultContainer ul {
+  width: 40vw;
+  list-style: none;
+  padding-left: 0;
+}
+
+#resultContainer li {
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 7px;
+  border: 2px solid;
+  font-weight: 600;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+#restartBtn {
+  border: none;
+  padding: 10px 50px;
+  font-size: 15px;
+  border-radius: 15px;
+  color: rgb(172, 172, 172);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ScrollButton {
+  position: fixed; /* 버튼의 위치 고정 */
+  right: 30px; /* x 위치 입력 */
+  cursor: pointer; /* 호버링 했을 때 커서 모양 변경 */
+  z-index: 10; /* 다른 태그에 가려지지 않게 우선순위 변경 */
+}
+
+.ScrollButton a {
+  height: 30px;
+}
+
+.ScrollButton img {
+  width: 30px !important;
+  height: 30px;
+}

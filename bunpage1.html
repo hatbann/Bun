@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bun.css" />
+    <link rel="shortcut icon" href="../assets/aiFilter.ico" type="image/x-icon">
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <title>Select Your X</title>
+  </head>
+  <body>
+    <div class="question">
+      <div><span class="name"></span>님이 &nbsp;</div>
+      <div>좋아하는 &nbsp;</div>
+      <div>동물은 &nbsp;</div>
+      <select name="animal" id="animal">
+        <option value="0">도마뱀</option>
+        <option value="1" disabled>고양이</option>
+        <option value="2" disabled>강아지</option>
+        <option value="3" disabled>햄스터</option>
+      </select>
+    </div>
+    <div class="question">
+      <div><span class="name"></span>님이 &nbsp;</div>
+      <div>좋아하는 &nbsp;</div>
+      <div>음식은 &nbsp;</div>
+      <select name="food" id="food">
+        <option value="0" disabled>아이스크림</option>
+        <option value="1">빵</option>
+        <option value="2" disabled>스테이크</option>
+        <option value="3" disabled>치킨</option>
+      </select>
+    </div>
+    <div class="question">
+      <div><span class="name"></span>님이 &nbsp;</div>
+      <div>좋아하는 &nbsp;</div>
+      <div>색깔은 &nbsp;</div>
+      <select name="color" id="color">
+        <option value="0" disabled>노란색</option>
+        <option value="1" disabled>빨간색</option>
+        <option value="2">초록색</option>
+        <option value="3" disabled>주황색</option>
+      </select>
+    </div>
+    <button type="button" id="selectbtn">선택 완료</button>
+    <script src="./bun.js"></script>
+    <script>
+      const names = $('.name');
+      names.map((i, name) => {
+        let nameidx = JSON.parse(localStorage.getItem('username'));
+        let newname = document.createTextNode(nameidx);
+        name.appendChild(newname);
+      });
+    </script>
+  </body>
+</html>
