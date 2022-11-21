@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./bun.css" />
-    <link rel="shortcut icon" href="../assets/aiFilter.ico" type="image/x-icon">
+    <link rel="stylesheet" href="bun.css" />
+    <link rel="shortcut icon" href="./assets/aiFilter.ico" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
@@ -13,7 +13,7 @@
   </head>
   <body>
       <div id="resultContainer">
-        <img src="../assets/robot.png" alt="" />
+        <img src="./assets/robot.png" alt="" />
         <h3>
           <p>AI Powder Filter가 추천하는</p>
           <p><span id="username"></span>님의 취향입니다</p>
@@ -27,7 +27,7 @@
         <button id="restartBtn" type="button" onclick="goIntro()">초기화</button>
     </div>
 
-    <script src="./bun.js"></script>
+    <script src="bun.js"></script>
     
     <script>
       let nameidx = JSON.parse(localStorage.getItem('username'));
