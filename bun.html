@@ -5,63 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="bun.css" />
-    <link rel="shortcut icon" href="assets/aiFilter.ico" type="image/x-icon">
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+    <link rel="shortcut icon" href="assets/aiFilter.ico" type="image/x-icon" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
     <title>AI Filter</title>
   </head>
   <body>
     <div id="firstTotalContainer">
       <div id="explain">
-        <h1>AI FILTER &nbsp;<br>Product Info</h1>
-        <img src="assets/자산 1.png" alt="">
-        <img id="info1" class="info" src="assets/자산 5.png"/>
-        <img id="info2" class="info" src="assets/자산 6.png"/>
-        <img id="info3" class="info" src="assets/자산 7.png"/>
+        <h2>Mr.<br />Filterbun</h2>
+        <img src="assets/speechBubble.png" alt="" id="speech" />
+        <img src="assets/robot.png" alt="" id="robot" />
+        <img id="info1" class="info" src="assets/자산 5.png" />
+        <img id="info2" class="info" src="assets/자산 6.png" />
+        <img id="info3" class="info" src="assets/자산 7.png" />
       </div>
-      <a id="TopButton" class="ScrollButton"
-      ><img src="assets/angle-up.png"
-    /></a>
-    <a id="BottomButton" class="ScrollButton"
-      ><img src="assets/angle-down.png"
-    /></a>
+      <div id="speech2">
+        <img src="assets/speechBubble2.png" alt="" />
+        <p>Mr.필터번 정보를<br />확인해보세요</p>
+      </div>
       <div id="Buncontainer">
-        <input type="text" placeholder="Write Your Name" id="nameinput" />
-        <div class="selectDrink">
-          <h1>Select Your Drink</h1>
-          <select name="drink" id="drink" onchange="changeSelect()">
-            <option disabled selected>Select Here</option>
-            <option value="0">Coke</option>
-            <option value="1">Sprite</option>
-            <option value="2">Fanta</option>
-            <option value="3">Water</option>
-          </select>
+        <p>AI 미스터 필터번이<br />당신의 취향탐색을 도와드립니다.</p>
+        <div id="select">
+          <input type="text" placeholder="Write Your Name" id="nameinput" />
+          <div class="selectDrink">
+            <select name="drink" id="drink" onchange="changeSelect()">
+              <option disabled selected>Select Here</option>
+              <option value="0">Coke</option>
+              <option value="1">Sprite</option>
+              <option value="2">Fanta</option>
+              <option value="3">Water</option>
+            </select>
+          </div>
         </div>
         <button type="button" id="openingBtn">Check</button>
       </div>
       <a id="footer"></a>
     </div>
     <script src="bun.js"></script>
-    <script>$(function () {
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 500) {
-          $('#TopButton').fadeIn();
-          $('#BottomButton').fadeOut();
-        } else {
-          $('#TopButton').fadeOut();
-          $('#BottomButton').fadeIn();
-        }
-      });
+    <script>
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 500) {
+            $('#TopButton').fadeIn();
+            $('#BottomButton').fadeOut();
+          } else {
+            $('#TopButton').fadeOut();
+            $('#BottomButton').fadeIn();
+          }
+        });
 
-      $('#TopButton').click(function () {
-        $('html').animate({ scrollTop: 0 }, 600);
-      });
+        $('#TopButton').click(function () {
+          $('html').animate({ scrollTop: 0 }, 600);
+        });
 
-      $('#BottomButton').click(function () {
-        $('html').animate({ scrollTop: $('#footer').offset().top }, 600);
+        $('#BottomButton').click(function () {
+          $('html').animate({ scrollTop: $('#footer').offset().top }, 600);
+        });
       });
-    });
     </script>
   </body>
 </html>

@@ -5,52 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="bun.css" />
-    <link rel="shortcut icon" href="assets/aiFilter.ico" type="image/x-icon">
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+    <link rel="shortcut icon" href="assets/aiFilter.ico" type="image/x-icon" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
     <title>Document</title>
   </head>
   <body>
-      <div id="resultContainer">
-        <img src="assets/robot.png" alt="" />
-        <h3>
-          <p>AI Powder Filter가 추천하는</p>
-          <p><span id="username"></span>님의 취향입니다</p>
-        </h3>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <button id="restartBtn" type="button" onclick="goIntro()">초기화</button>
+    <div id="resultContainer">
+      <img src="assets/robot.png" alt="" />
+      <div id="resultBox">
+        <p>
+          <span id="username"></span>님은 <span id="selectedDrink"></span>를
+          즐겨마시며,<span id="selectedAnimal"></span
+          ><span id="selectedFood"></span>
+        </p>
+      </div>
     </div>
 
     <script src="bun.js"></script>
-    
+
     <script>
+      const container = document.getElementById('resultBox');
       let nameidx = JSON.parse(localStorage.getItem('username'));
+      let drinkidx = JSON.parse(localStorage.getItem('drink'));
+      let animalidx = JSON.parse(localStorage.getItem('animal'));
+      let foodidx = JSON.parse(localStorage.getItem('food'));
+
+      let selectedDrink = $('#selectedDrink');
+      let selectedAnimal = $('#selectedAnimal');
+      let selectedFood = $('#selectedFood');
+
       let newname = document.createTextNode(nameidx);
-      let drinkIdx = JSON.parse(localStorage.getItem('drink'));
       const liArr = $('li');
       let selecteddrink;
-      console.log(drinkIdx);
-      switch (Number(drinkIdx)) {
+      console.log(drinkidx, animalidx, foodidx);
+
+      switch (Number(drinkidx)) {
         case 0:
           selecteddrink = 'Coke';
+          selectedDrink.text(selecteddrink);
+          selectedAnimal.text(animalidx);
+          selectedFood.text(foodidx);
           coloring('coke');
           break;
         case 1:
           selecteddrink = 'Sprite';
+          selectedDrink.text(selecteddrink);
+          selectedAnimal.text(animalidx);
+          selectedFood.text(foodidx);
           coloring('sprite');
           break;
         case 2:
           selecteddrink = 'Fanta';
+          selectedDrink.text(selecteddrink);
+          selectedAnimal.text(animalidx);
+          selectedFood.text(foodidx);
           coloring('fanta');
           break;
         case 3:
           selecteddrink = 'Water';
+          selectedDrink.text(selecteddrink);
+          selectedAnimal.text(animalidx);
+          selectedFood.text(foodidx);
           coloring('water');
           break;
         default:
@@ -73,9 +97,7 @@
       });
 
       function coloring(color) {
-        liArr.map((i, li) => {
-          li.className = color;
-        });
+        container.className = color;
       }
     </script>
   </body>

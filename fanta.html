@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="bun.css" />
-    <link rel="shortcut icon" href="assets/aiFilter.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/aiFilter.ico" type="image/x-icon" />
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
@@ -15,55 +15,55 @@
   </head>
   <body>
     <div id="questionContainer">
-      <h1>Choose Your Favorite</h1>
-      <div class="question">
-        <div><span class="name"></span>'s &nbsp;</div>
-        <div>Fanvorite &nbsp;</div>
-        <div>Animal is&nbsp;</div>
-        <select name="animal" id="animal">
-          <option value="Lizard" disabled>Lizard</option>
-          <option value="Cat">Cat</option>
-          <option value="Puppy" disabled>Puppy</option>
-          <option value="Whale" disabled>Whale</option>
-        </select>
+      <img src="assets/speechBubble3.png" alt="" class="speech" />
+      <img src="assets/robot.png" alt="" class="robot" />
+      <div id="questions">
+        <div class="question">
+          <div><span class="name"></span>'s &nbsp;</div>
+          <div>Fanvorite &nbsp;</div>
+          <div>Animal is&nbsp;</div>
+          <select name="animal" id="animal">
+            <option value="Lizard" disabled>Lizard</option>
+            <option value="Cat">Cat</option>
+            <option value="Puppy" disabled>Puppy</option>
+            <option value="Whale" disabled>Whale</option>
+          </select>
+        </div>
+        <div class="question">
+          <div><span class="name"></span>'s &nbsp;</div>
+          <div>Fanvorite &nbsp;</div>
+          <div>Snack is &nbsp;</div>
+          <select name="food" id="food">
+            <option value="Franch Fries" disabled>Franch Fries</option>
+            <option value="Coleslaw" disabled>Coleslaw</option>
+            <option value="Nuggets">Nuggets</option>
+            <option value="ce Cream" disabled>Ice Cream</option>
+          </select>
+        </div>
+        <div class="question">
+          <div><span class="name"></span>'s &nbsp;</div>
+          <div>Fanvorite &nbsp;</div>
+          <div>Color is &nbsp;</div>
+          <select name="color" id="color">
+            <option value="Green" disabled>Green</option>
+            <option value="Orange">Orange</option>
+            <option value="Red" disabled>Red</option>
+            <option value="Blue" disabled>Blue</option>
+          </select>
+        </div>
+        <div class="question">
+          <div><span class="name"></span>'s &nbsp;</div>
+          <div>Fanvorite &nbsp;</div>
+          <div>Season is &nbsp;</div>
+          <select name="season" id="season">
+            <option value="Spring">Spring</option>
+            <option value="Summer" disabled>Summer</option>
+            <option value="Autumn" disabled>Autumn</option>
+            <option value="Winter" disabled>Winter</option>
+          </select>
+        </div>
+        <button type="button" id="selectbtn">Submit</button>
       </div>
-      <div class="question">
-        <div><span class="name"></span>'s &nbsp;</div>
-        <div>Fanvorite &nbsp;</div>
-        <div>Snack is &nbsp;</div>
-        <select name="food" id="food">
-          <option value="Franch Fries" disabled>Franch Fries</option>
-          <option value="Coleslaw" disabled>Coleslaw</option>
-          <option value="Nuggets">Nuggets</option>
-          <option value="ce Cream" disabled>Ice Cream</option>
-        </select>
-      </div>
-      <div class="question">
-        <div><span class="name"></span>'s &nbsp;</div>
-        <div>Fanvorite &nbsp;</div>
-        <div>Color is &nbsp;</div>
-        <select name="color" id="color">
-          <option value="Green" disabled>Green</option>
-          <option value="Orange">Orange</option>
-          <option value="Red" disabled>Red</option>
-          <option value="Blue" disabled>Blue</option>
-        </select>
-      </div>
-      <div class="question">
-        <div><span class="name"></span>'s &nbsp;</div>
-        <div>Fanvorite &nbsp;</div>
-        <div>Season is &nbsp;</div>
-        <select name="season" id="season">
-          <option value="Spring">Spring</option>
-          <option value="Summer" disabled>Summer</option>
-          <option value="Autumn" disabled>Autumn</option>
-          <option value="Winter" disabled>Winter</option>
-        </select>
-      </div>
-      <button type="button" id="selectbtn">
-        <img src="assets/heart.png" alt="" width="80px" />
-        <span>Submit</span>
-      </button>
     </div>
     <script src="bun.js"></script>
     <script>
