@@ -19,15 +19,18 @@
     <title>Document</title>
   </head>
   <body>
+    <img src="assets/star.png" alt="" id="star" >
+    <img src="assets/xBtn.png" alt="" id="xBtn" class="transparent">
     <div id="resultContainer">
-      <img src="assets/robot.png" alt="" />
+      <img src="assets/robot.png" alt="" id="resultRobot"/>
       <div id="resultBox">
-        <p>
-          <span id="username"></span>님은 <span id="selectedDrink"></span>를
-          즐겨마시며,<span id="selectedAnimal"></span
-          ><span id="selectedFood"></span>
+        <p>AI.미스터 번이 파악한 <span id="username" style="font-weight : 800"></span>님의 취향입니다.
+          <span id="username2" style="font-weight : 800"></span >님은 <span id="selectedDrink" style="font-weight : 800"></span>를
+          즐겨마시며,<span id="selectedAnimal" style="font-weight : 800"></span
+          >와 노는 것을 좋아합니다!<span id="selectedFood" style="font-weight : 800">평소 취향을 파악한 결과 해피버거와 곁들여 사이드 메뉴로는 </span>이 좋을 것 같아요
         </p>
-      </div>
+    </div>        <button type="button" onclick="goIntro()" id="goIntroBtn">Fin</button>
+  </div>
     </div>
 
     <script src="bun.js"></script>
@@ -81,7 +84,7 @@
           break;
       }
       $('#username').text(nameidx);
-
+      $('#username2').text(nameidx)
       let contentArr = [];
 
       contentArr.push(selecteddrink);

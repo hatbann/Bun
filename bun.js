@@ -49,6 +49,7 @@ function changeSelect() {
     drink.className = 'coke';
     btn.className = 'coke';
   } else if (Number(drinkVal) === 1) {
+    console.log('hrerx');
     drink.className = 'sprite';
     btn.className = 'sprite';
   } else if (Number(drinkVal) === 2) {
@@ -104,3 +105,23 @@ function goIntro(){
   reset();
   location.replace('./bunIntro.html');
 }
+
+$('#star').click(function(e){
+  let star = $('#star');
+  let xBtn = $('#xBtn');
+  let msg = $('#messege');
+
+  star.addClass('transparent');
+  xBtn.removeClass('transparent');
+  msg.removeClass('transparent');
+});
+
+$('#xBtn').click(function(e){
+  let star = $('#star');
+  let xBtn = $('#xBtn');
+  let msg = $('#messege');
+
+  star.removeClass('transparent');
+  xBtn.addClass('transparent');
+  msg.addClass('transparent');
+})

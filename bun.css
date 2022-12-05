@@ -4,11 +4,43 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+#messege{
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+
+#star{
+  width: 7vw;
+  position: fixed;
+  top: 30px;
+  left: 320px;
+  z-index: 200;
+}
+
+#xBtn{
+  width: 7vw;
+  position: absolute;
+  top: 30px;
+  left: 320px;
+  z-index: 200;
+}
+
+
+.transparent {
+  display: none;
+}
+
 /* Intro */
 #IntroContainer {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url("assets/backgroundIntro.png");
+  background-size: cover;
 }
 
 #mainLogo {
@@ -22,27 +54,26 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
-section h1 {
-  font-size: 1.8rem;
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-section h1:first-child {
-  margin-top: 70px;
-}
 
 section img {
   width: 70vw;
+  position: absolute;
+  top: 230px;
 }
 
 section p {
   font-size: 1rem;
   text-align: center;
   line-height: 25px;
-  margin-top: 45px;
+  position: absolute;
+top: 470px;
+font-size: 20px;
+font-weight: 800;
+color: #4868a3;
+
 }
 
 /* bun 페이지*/
@@ -323,12 +354,20 @@ section p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
+  background-image: url("assets/lastback.png");
+  background-size: cover;
 }
 
+
+
 #resultBox {
-  width: 300px;
-  height: 350px;
+  width: 70vw;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 20px;
+  line-height: 35px;
 }
 
 #resultBox.fanta {
@@ -352,8 +391,8 @@ section p {
 }
 
 #resultContainer img {
-  width: 27vw;
-  margin-top: 5vh;
+  width: 35vw;
+  margin-top: -100px;
 }
 
 #resultContainer h3 {
@@ -397,6 +436,16 @@ section p {
   cursor: pointer;
 }
 
+#goIntroBtn{
+  margin-top: 20px;
+  border: none;
+  border: 1px solid #e95305;
+  background-color: white;
+  padding: 10px 50px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
 .ScrollButton {
   position: fixed; /* 버튼의 위치 고정 */
   right: 30px; /* x 위치 입력 */
@@ -412,3 +461,5 @@ section p {
   width: 30px !important;
   height: 30px;
 }
+
+
